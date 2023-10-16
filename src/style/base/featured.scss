@@ -1,0 +1,121 @@
+.featured {
+    margin-top: 67px;
+}
+
+.featured__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 513px;
+    padding-left: 177px;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+    background-image: url(/src/img/featured_zigzag_desktop.svg);
+    width: 1050px;
+    height: 23px;
+    bottom: -92px;
+    background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+    background-image: url(/src/img/featuted_icon.svg);
+    width: 100px;
+    height: 34px;
+    top: 73px;
+    left: 33px;
+    background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+    }
+}
+
+.featured__description {
+    margin-top: 60px;
+}
+
+.featured__caption {
+    font-family: $custom-font;
+    font-weight: 700;
+    margin: 0;
+    font-size: 53px;
+    position: absolute;
+    margin-top: -22px;
+}
+
+.featured__text {
+    margin: 0;
+    margin-top: 97px;
+    font-family: $custom-font;
+    font-weight: 400;
+    font-size: 17px;
+    color: $hero-grey;
+    padding-right: 31px;
+}
+
+.featured__element-inner {
+    display: flex;
+    margin-top: 63px;
+}
+
+.featured__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-right: 35px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.featured__item {
+    margin-bottom: 20px;
+    position: relative;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &::after {
+        content: '';
+            position: absolute;
+            top: 32px;
+            left: 0px;
+            width: 197px;
+            height: 1px;
+            background-color: $header-grey;
+    }
+}
+
+.featured__element {
+    font-family: $custom-font;
+    color: $hero-grey;
+    font-size: 15px;
+    font-weight: 400;
+
+}
+
+.featured__price {
+    margin-top: 126px;
+    display: block;
+    font-size: 20px;
+    margin-left: 72px;
+    font-family: $custom-font;
+}
+
+.featured__button {
+    margin: 0;
+    background-color: transparent;
+    margin-top: 25px;
+    padding: 13px 98px;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: $custom-font;
+    color: $hero-grey;
+}

@@ -1,0 +1,136 @@
+.about {
+  margin-top: 155px;
+}
+
+.about__wrapper {
+  padding-left: 175px;
+}
+
+.caption {
+  font-family: $custom-font;
+  font-weight: 700;
+  margin: 0;
+  font-size: 53px;
+}
+
+.about__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 265px 325px;
+  column-gap: 84px;
+  row-gap: 92px;
+  margin-top: 79px;
+}
+
+.about__text {
+  font-family: $custom-font;
+  color: $basic-black;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  margin: 0;
+}
+
+.about__item-one {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url(/src/img/about_icon_1.svg.svg);
+    width: 33px;
+    height: 38px;
+    top: -48px;
+    left: 8px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+.about__item-two {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url(/src/img/about_icon_4.svg);
+    width: 35px;
+    height: 34px;
+    top: -48px;
+    left: 8px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+.about__item-three {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url(/src/img/about_icon_2.svg);
+    width: 47px;
+    height: 27px;
+    top: -48px;
+    left: 8px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+.about__item-four {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url(/src/img/about_icon_5.svg);
+    width: 55px;
+    height: 23px;
+    top: -48px;
+    left: 8px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+.about__item-five {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url(/src/img/about_icon_3.svg);
+    width: 34px;
+    height: 27px;
+    top: -48px;
+    left: 8px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+.about__item-six {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url(/src/img/about_icon_6.svg);
+    width: 33px;
+    height: 32px;
+    top: -48px;
+    left: 8px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
