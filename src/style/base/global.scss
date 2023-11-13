@@ -9,10 +9,10 @@ body {
   margin: 0;
 }
 
-// img {
-//   min-width: 100%;
-//   height: auto;
-// }
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+}
 
 .visually-hidden {
   position: absolute;

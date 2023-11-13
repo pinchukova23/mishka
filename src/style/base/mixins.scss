@@ -1,0 +1,30 @@
+@mixin font-bold {
+    font-family: $custom-font;
+    font-weight: 700;
+    color: $basic-black;
+}
+
+@mixin font-regular {
+    font-family: $custom-font;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+@mixin font-regular-grey {
+    font-family: $custom-font;
+    font-weight: 400;
+    font-size: 17px;
+    color: $hero-grey;
+}
+
+@mixin font-bold-grey {
+    font-weight: 700;
+  font-family: $custom-font;
+  color: $hero-grey;
+}
+
+@mixin list-style {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

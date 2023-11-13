@@ -1,0 +1,130 @@
+.hero {
+  background-image: url('/src/img/hero_desktop.png');
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: $alabaster;
+  padding-top: 19px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url('/src/img/zigzag_desktop.svg');
+    background-size: contain;
+    z-index: 2;
+    bottom: -1px;
+    height: 34px;
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+}
+.hero__list {
+  @include list-style;
+  display: grid;
+  grid-template-columns: 174px 1fr 259px;
+  margin-bottom: 114px;
+}
+
+.hero__item {
+  &--order {
+    padding-left: 45px;
+  }
+
+  &--end {
+    justify-self: end;
+  }
+}
+
+.hero__link {
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.hero__text {
+  @include font-bold;
+  font-size: 15px;
+  margin: 0;
+}
+
+.hero__text-delivery {
+  font-family: $custom-font;
+  font-size: 15px;
+  font-weight: 400;
+  color: $hero-grey;
+  margin: 0;
+}
+
+.hero__caption {
+  @include font-bold;
+  margin: 0;
+  text-align: center;
+  font-size: 53px;
+  margin-bottom: 355px;
+  line-height: 57px;
+}
+
+.hero__catalog-list {
+  @include list-style;
+  display: flex;
+}
+
+.hero__catalog-item{
+  flex-grow: 1;
+}
+
+.hero__catalog-link {
+  position: relative;
+  display: block;
+  z-index: 1;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: $custom-font;
+  font-weight: 700;
+  color: $basic-white;
+  padding-top: 25px;
+  padding-bottom: 61px;
+  padding-left: 37px;
+}
+
+.hero__catalog-link--design {
+  background-color: $green;
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url(/src/img/hero_item.svg);
+    width: 41px;
+    height: 62px;
+    top: 33px;
+    right: 33px;
+    z-index: 0;
+  }
+
+}
+
+.hero__catalog-link-toy {
+  background-color: $green-dark;
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url(/src/img/hero_item2.svg);
+    width: 60px;
+    height: 61px;
+    top: 33px;
+    right: 33px;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+.hero__catalog-text {
+  margin: 0;
+  max-width: 139px;
+}

@@ -5,44 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./style/main.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <header class="header">
       <div class="container">
         <div class="header__wrapper">
-          <div class="header__nav">
-            <ul class="header__nav-list">
-              <li class="header__nav-item">
-                <a class="header__nav-link header__nav-link-catalog" href="#">
-                  <p class="header__nav-text">Каталог товаров</p>
-                </a>
-              </li>
-              <li class="header__nav-item">
-                <a class="header__nav-link" href="#">
-                  <p class="header__nav-text">Вязание на заказ</p>
-                </a>
-              </li>
-              <li class="header__nav-item">
-                <a class="header__logo" href="#">
-                  <img
-                    class="header__nav-logo"
-                    src="./img/logo_header.svg"
-                    width="149px"
-                    height="72px"
-                    alt="Главная страница сайта Mishka"
-                  />
-                </a>
-              </li>
-              <li class="header__nav-item">
-                <button class="header__nav-button" type="button"></button>
-              </li>
-              <li class="header__nav-item header__nav-item-car">
-                <a class="header__nav-link header__nav-link-car" href="#">
-                  <p class="header__nav-text">Корзина: пока пуста</p>
-                </a>
-              </li>
-            </ul>
-          </div>
+          <a class="header__logo" href="index.html">
+            <img
+              class="header__img-logo"
+              src="./img/logo_header.svg"
+              width="149px"
+              height="72px"
+              alt="Главная страница сайта Mishka"
+            />
+          </a>
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a class="header__nav-link header__nav-link--hover" href="#">
+                <p class="header__nav-text">Каталог товаров</p>
+              </a>
+            </li>
+            <li class="header__nav-item header__nav-item--order">
+              <a class="header__nav-link header__nav-link--hover" href="#">
+                <p class="header__nav-text">Вязание на заказ</p>
+              </a>
+            </li>
+            <li class="header__nav-item header__nav-item--center">
+              <button class="header__nav-button" type="button"></button>
+            </li>
+            <li class="header__nav-item header__nav-item--car">
+              <a class="header__nav-link header__nav-link--order" href="#">
+                <p class="header__nav-text">Корзина: пока пуста</p>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </header>
@@ -58,12 +58,12 @@
                   <p class="hero__text">Новые поступления</p>
                 </a>
               </li>
-              <li class="hero__item">
+              <li class="hero__item hero__item--order">
                 <a class="hero__link" href="#">
                   <p class="hero__text">Распродажа</p>
                 </a>
               </li>
-              <li class="hero__item">
+              <li class="hero__item hero__item--end">
                 <a class="hero__link" href="#">
                   <p class="hero__text-delivery">
                     Бесплатная доставка по России
@@ -72,25 +72,22 @@
               </li>
             </ul>
 
-            <h2 class="captoin">Милые штуки ручной<br />работы для дома</h2>
-
-            <div class="hero__catalog">
-              <ul class="hero__catalog-list">
-                <li class="hero__catalog-item hero__catalog-item-design">
-                  <a
-                    class="hero__catalog-link hero__catalog-link-design"
-                    href="#"
-                  >
-                    Предметы<br />интерьера
-                  </a>
-                </li>
-                <li class="hero__catalog-item">
-                  <a class="hero__catalog-link hero__catalog-link-toy" href="#">
-                    Детские<br />игрушки
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <h2 class="hero__caption">Милые&nbsp;штуки&nbsp;ручной работы&nbsp;для&nbsp;дома</h2>
+            <ul class="hero__catalog-list">
+              <li class="hero__catalog-item hero__catalog-item-design">
+                <a
+                  class="hero__catalog-link hero__catalog-link--design"
+                  href="#"
+                >
+                <p class="hero__catalog-text"> Предметы интерьера</p>
+                </a>
+              </li>
+              <li class="hero__catalog-item">
+                <a class="hero__catalog-link hero__catalog-link-toy" href="#">
+                 <p class="hero__catalog-text"> Детские игрушки</p>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -104,38 +101,27 @@
                 Экологически чистая пряжа, ручная работа. Доступны в шести
                 расцветках, и трех размерах.
               </p>
-              <div class="featured__element-inner">
-                <ul class="featured__list">
-                  <li class="featured__item">
-                    <span class="featured__element">Цвет:</span>
-                  </li>
-                  <li class="featured__item">
-                    <span class="featured__element">Диаметр:</span>
-                  </li>
-                  <li class="featured__item">
-                    <span class="featured__element">Высота:</span>
-                  </li>
-                </ul>
 
-                <ul class="featured__list">
-                  <li class="featured__item">
-                    <span class="featured__element">«Тиффани»/серый</span>
-                  </li>
-                  <li class="featured__item">
-                    <span class="featured__element">25 см</span>
-                  </li>
-                  <li class="featured__item">
-                    <span class="featured__element">15 см</span>
-                  </li>
-                </ul>
-              </div>
-
+              <table class="featured__tab" border="1">
+                <tr class="featured__inner">
+                  <td class="featured__item">Цвет:</td>
+                  <td>«Тиффани»/серый</td>
+                </tr>
+                <tr class="featured__inner">
+                  <td class="featured__item">Диаметр:</td>
+                  <td>25 см</td>
+                </tr>
+                <tr class="featured__inner">
+                  <td class="featured__item">Высота:</td>
+                  <td>15 см</td>
+                </tr>
+              </table>
               <span class="featured__price">Цена: 990 руб.</span>
               <button class="featured__button" type="button">Заказать</button>
             </div>
 
             <div class="featured__img-inner">
-              <img src="./img/featured.jpg" alt="Товар" />
+              <img class="featured__img" width="525px" height="636px" src="./img/featured.jpg" alt="Товар" />
             </div>
           </div>
         </div>
@@ -146,26 +132,26 @@
           <div class="about__wrapper">
             <h2 class="caption">Коротко о нас:</h2>
             <ul class="about__list">
-              <li class="about__item-one">
+              <li class="about__item about__item-one">
                 <p class="about__text">Экологически чистые материалы</p>
               </li>
-              <li class="about__item-two">
+              <li class="about__item about__item-two">
                 <p class="about__text">Связано вручную с любовью и умилением</p>
               </li>
-              <li class="about__item-three">
+              <li class="about__item about__item-three">
                 <p class="about__text">
                   Скандинавский стиль по российской цене
                 </p>
               </li>
-              <li class="about__item-four">
+              <li class="about__item about__item-four">
                 <p class="about__text">
                   Поддержка отечественного производителя
                 </p>
               </li>
-              <li class="about__item-five">
+              <li class="about__item about__item-five">
                 <p class="about__text">Увеличивает лайки на фотографиях</p>
               </li>
-              <li class="about__item-six">
+              <li class="about__item about__item-six">
                 <p class="about__text">Поставляется в подарочной упаковке</p>
               </li>
             </ul>
@@ -187,8 +173,10 @@
               фотографии сразу стали более стильными, а также набирают больше
               лайков!
             </p>
-            <span class="reviews__name">Анастасия Красильникова</span>
+            <div>
+              <span class="reviews__name">Анастасия Красильникова</span>
             <span class="reviews__id">@misssssiskras</span>
+            </div>
 
             <div class="reviews__button-inner">
               <button
@@ -209,23 +197,23 @@
           <div class="contacts__wrapper">
             <div class="contacts_description">
               <h2 class="caption">Контакты</h2>
-              <ul class="contacts__list">
-                <li>
-                  <span class="contacts__info">e-mail:</span>
-                  <a
+              <table class="contacts__table" border="1">
+                <tr class="contacts__table-inner">
+                  <td>e-mail:</td>
+                  <td> <a
                     class="contacts__info-link"
                     href="mailto:info@mimimishkashop.ru"
                     >info@mimimishkashop.ru</a
-                  >
-                </li>
-                <li class="contacts__item">
-                  <span class="contacts__info">адрес:</span>
-                  <address class="contacts__info-address">
-                    Санкт-Петербург<br />ул. Большая Конюшенная д. 19/8, офис
-                    101
-                  </address>
-                </li>
-              </ul>
+                  ></td>
+                </tr>
+                <tr>
+                  <td class="contacts__table-item">адрес:</td>
+                  <td class="contacts__table-item-adress"><address class="contacts__info-address">
+                    Санкт-Петербург ул.&nbsp;Большая&nbsp;Конюшенная д.&nbsp;19/8,&nbsp;офис&nbsp;101
+                  </address></td>
+                </tr>
+              </table>
+
               <button class="contacts__button" type="button">
                 Напишите нам
               </button>
@@ -250,17 +238,19 @@
         <div class="container">
           <div class="footer__wrapper">
             <div class="footer__nav">
-              <a class="footer__logo" href="#">
-                <img
-                  src="./img/logo_footer.svg"
-                  width="102px"
-                  height="35px"
-                  alt="Ссылка на главную страницу"
-                />
-              </a>
+              <div class="footer__img-inner">
+                <a href="#">
+                  <img class="footer__logo"
+                    src="./img/logo_footer.svg"
+                    width="102px"
+                    height="35px"
+                    alt="Ссылка на главную страницу"
+                  />
+                </a>
+              </div>
               <ul class="footer__media-list">
                 <li class="footer__media-item">
-                  <a class="footer__media-link" href="#">
+                  <a class="footer__media-link footer__media-link--inst" href="#">
                     <img
                       class="footer__media-img"
                       src="./img/insta.svg"

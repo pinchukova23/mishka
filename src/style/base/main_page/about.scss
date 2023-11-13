@@ -14,27 +14,23 @@
 }
 
 .about__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @include list-style;
   display: grid;
   grid-template-columns: 265px 325px;
   column-gap: 84px;
-  row-gap: 92px;
-  margin-top: 79px;
+  row-gap: 26px;
+  
 }
 
 .about__text {
-  font-family: $custom-font;
-  color: $basic-black;
+  @include font-bold;
   font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
   margin: 0;
 }
 
 .about__item-one {
   position: relative;
+  max-width: 229px;
 
   &::after {
     content: "";
@@ -42,7 +38,7 @@
     background-image: url(/src/img/about_icon_1.svg.svg);
     width: 33px;
     height: 38px;
-    top: -48px;
+    top: 22px;
     left: 8px;
     background-repeat: no-repeat;
     background-size: contain;
@@ -50,8 +46,13 @@
   }
 }
 
+.about__item {
+  padding-top: 75px;
+}
+
 .about__item-two {
   position: relative;
+  max-width: 256px;
 
   &::after {
     content: "";
@@ -59,7 +60,7 @@
     background-image: url(/src/img/about_icon_4.svg);
     width: 35px;
     height: 34px;
-    top: -48px;
+    top: 27px;
     left: 8px;
     background-repeat: no-repeat;
     background-size: contain;
@@ -69,6 +70,7 @@
 
 .about__item-three {
   position: relative;
+  max-width: 256px;
 
   &::after {
     content: "";
@@ -76,8 +78,8 @@
     background-image: url(/src/img/about_icon_2.svg);
     width: 47px;
     height: 27px;
-    top: -48px;
-    left: 8px;
+    top: 25px;
+    left: 5px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -93,8 +95,8 @@
     background-image: url(/src/img/about_icon_5.svg);
     width: 55px;
     height: 23px;
-    top: -48px;
-    left: 8px;
+    top: 28px;
+    left: 1px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -103,6 +105,7 @@
 
 .about__item-five {
   position: relative;
+  max-width: 229px;
 
   &::after {
     content: "";
@@ -110,7 +113,7 @@
     background-image: url(/src/img/about_icon_3.svg);
     width: 34px;
     height: 27px;
-    top: -48px;
+    top: 28px;
     left: 8px;
     background-repeat: no-repeat;
     background-size: contain;
@@ -120,6 +123,7 @@
 
 .about__item-six {
   position: relative;
+  max-width: 256px;
 
   &::after {
     content: "";
@@ -127,7 +131,7 @@
     background-image: url(/src/img/about_icon_6.svg);
     width: 33px;
     height: 32px;
-    top: -48px;
+    top: 22px;
     left: 8px;
     background-repeat: no-repeat;
     background-size: contain;

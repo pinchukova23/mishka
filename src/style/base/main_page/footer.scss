@@ -1,5 +1,4 @@
 .footer {
-  margin-top: 109px;
   background-color: #f1f1f1;
 }
 
@@ -9,14 +8,12 @@
 }
 
 .footer__nav {
-  display: grid;
-  grid-template-columns: 414px 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer__media-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @include list-style;
   display: flex;
   align-items: center;
 }
@@ -29,17 +26,20 @@
 }
 
 .footer__media-html {
-  justify-self: end;
   display: flex;
   align-items: start;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .footer__media-html-text {
+  @include font-bold;
   margin: 0;
-  color: $basic-black;
-  font-family: $custom-font;
   font-size: 19px;
-  font-style: normal;
-  font-weight: 700;
-  margin-right: 18px;
+  margin-right: 28px;
 }
+
+

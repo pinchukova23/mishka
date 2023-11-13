@@ -1,0 +1,138 @@
+
+.header {
+  border-bottom: 1px solid $header-grey;
+}
+
+.header__logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 7px;
+  display: flex;
+  align-items: center;
+    justify-content: center;
+
+}
+
+.header__img-logo:hover {
+    opacity: 0.6;
+  }
+
+.header__nav-text {
+  @include font-bold;
+  font-size: 17px;
+  margin: 0;
+
+}
+
+.header__nav-list {
+  @include list-style;
+  display: grid;
+  grid-template-columns: 185px 1fr 82px 261px;
+}
+
+.header__nav-link {
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+
+  &--order {
+    padding-left: 27px;
+  }
+
+ &--hover:hover {
+  opacity: 0.6;
+ }
+
+}
+
+.header__nav-item {
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: $header-grey;
+  }
+
+  &:last-child::after {
+    background-color: transparent;
+  }
+
+  &--center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--order {
+    padding-left: 35px;
+  }
+
+  &--car {
+    display: flex;
+    align-items: center;
+    justify-self: end;
+  &::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-image: url('/src/img/header_cart.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:hover::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-image: url('/src/img/header_cart_hover.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  }
+
+  &--car:hover {
+    opacity: 0.6;
+  }
+
+}
+
+.header__nav-button {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-image: url('/src/img/header_search.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &:hover::before {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-image: url('/src/img/header_search_hover.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+
+}
+

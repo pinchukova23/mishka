@@ -1,0 +1,129 @@
+.contacts {
+  margin-top: 152px;
+  margin-bottom: 109px;
+}
+
+.contacts__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 522px;
+  position: relative;
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    background-image: url(/src/img/contacts_flag.svg);
+    width: 47px;
+    height: 81px;
+    top: 65px;
+    left: 62px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+.contacts_description {
+  padding-left: 175px;
+  margin-top: 77px;
+}
+
+.contacts__table {
+  border-spacing: 6px 0px;
+    width: 249px;
+    border: transparent;
+    margin-top: 37px;
+    color: #444;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400
+}
+
+.contacts__table-item {
+  padding-bottom: 32px;
+}
+
+.contacts__table-item-adress {
+  padding-top: 30px;
+  padding-left: 17px;
+}
+
+.contacts__list {
+  @include list-style;
+  margin-top: 40px;
+}
+
+.contacts__item {
+  display: flex;
+  margin-top: 35px;
+}
+
+.contacts__info {
+  @include font-regular-grey;
+  
+}
+
+.contacts__info-link {
+  @include font-regular-grey;
+  margin-left: 16px;
+  text-decoration: none;
+  position: relative;
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 218px;
+    height: 1px;
+    background-color: $green;
+    top: 31px;
+    left: 0;
+  }
+}
+
+.contacts__info-address {
+  @include font-regular-grey;
+  line-height: 30px;
+}
+
+.contacts__map-button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  height: 100%;
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    background-image: url(/src/img/map_pin.svg);
+    width: 67px;
+    height: 100px;
+    top: 156px;
+    left: 245px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+.contacts__button {
+  @include font-bold-grey;
+  background-color: transparent;
+  margin: 0;
+  padding: 13px 39px;
+  font-size: 17px;
+  text-transform: uppercase;
+  margin-top: 80px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hero-grey;
+    color: $basic-white;
+  }
+}
+
+.contacts__map-img {
+  object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+}
