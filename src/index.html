@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   </head>
   <body>
     <header class="header">
@@ -22,9 +22,26 @@
               height="72px"
               alt="Главная страница сайта Mishka"
             />
+
+            <img
+              class="header__img-logo-tablet"
+              src="./img/header_logo_tablet.svg"
+              width="113px"
+              height="46px"
+              alt="Главная страница сайта Mishka"
+            />
           </a>
+
+          <img
+          class="header__img-logo-mobile"
+          src="./img/header_logo_mobile.svg"
+          width="86px"
+          height="35px"
+          alt="Главная страница сайта Mishka"
+        />
+      </a>
           <ul class="header__nav-list">
-            <li class="header__nav-item">
+            <li class="header__nav-item header__nav-item--catalog">
               <a class="header__nav-link header__nav-link--hover" href="#">
                 <p class="header__nav-text">Каталог товаров</p>
               </a>
@@ -73,6 +90,7 @@
             </ul>
 
             <h2 class="hero__caption">Милые&nbsp;штуки&nbsp;ручной работы&nbsp;для&nbsp;дома</h2>
+            <h2 class="hero__caption hero__caption-mobile">Милые&nbsp;штуки ручной работы&nbsp;для&nbsp;дома</h2>
             <ul class="hero__catalog-list">
               <li class="hero__catalog-item hero__catalog-item-design">
                 <a
@@ -96,7 +114,7 @@
         <div class="container">
           <div class="featured__wrapper">
             <div class="featured__description">
-              <h2 class="caption featured__caption">Вязаные корзинки</h2>
+              <h2 class=" featured__caption">Вязаные корзинки</h2>
               <p class="featured__text">
                 Экологически чистая пряжа, ручная работа. Доступны в шести
                 расцветках, и трех размерах.
@@ -124,13 +142,48 @@
               <img class="featured__img" width="525px" height="636px" src="./img/featured.jpg" alt="Товар" />
             </div>
           </div>
+
+
+          <div class="featured__wrapper featured__wrapper-modile ">
+            <div class="featured__description">
+              <h2 class=" featured__caption">Вязаные корзинки</h2>
+              <p class="featured__text">
+                Экологически чистая пряжа, ручная работа. Доступны в шести
+                расцветках, и трех размерах.
+              </p>
+
+              <table class="featured__tab" border="1">
+                <tr class="featured__inner">
+                  <td class="featured__item">Цвет:</td>
+                  <td>«Тиффани»/серый</td>
+                </tr>
+                <tr class="featured__inner">
+                  <td class="featured__item">Диаметр:</td>
+                  <td>25 см</td>
+                </tr>
+                <tr class="featured__inner">
+                  <td class="featured__item">Высота:</td>
+                  <td>15 см</td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="featured__img-inner">
+              <img class="featured__img" width="525px" height="636px" src="./img/featured.jpg" alt="Товар" />
+            </div>
+
+            <div class="featured__price-mobile">
+              <span class="featured__price">Цена: 990 руб.</span>
+              <button class="featured__button" type="button">Заказать</button>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="about">
         <div class="container">
           <div class="about__wrapper">
-            <h2 class="caption">Коротко о нас:</h2>
+            <h2 class="about__caption">Коротко о нас:</h2>
             <ul class="about__list">
               <li class="about__item about__item-one">
                 <p class="about__text">Экологически чистые материалы</p>
@@ -155,6 +208,31 @@
                 <p class="about__text">Поставляется в подарочной упаковке</p>
               </li>
             </ul>
+
+            <ul class="about__list about__list-modile">
+              <li class="about__item about__item-one">
+                <p class="about__text">Экологически чистые материалы</p>
+              </li>
+              <li class="about__item about__item-three">
+                <p class="about__text">
+                  Скандинавский стиль по российской цене
+                </p>
+              </li>
+              <li class="about__item about__item-five">
+                <p class="about__text">Увеличивает лайки на фотографиях</p>
+              </li>
+              <li class="about__item about__item-two">
+                <p class="about__text">Связано вручную с любовью и умилением</p>
+              </li>
+              <li class="about__item about__item-four">
+                <p class="about__text">
+                  Поддержка отечественного производителя
+                </p>
+              </li>
+              <li class="about__item about__item-six">
+                <p class="about__text">Поставляется в подарочной упаковке</p>
+              </li>       
+            </ul>
           </div>
         </div>
       </section>
@@ -162,7 +240,7 @@
       <section class="reviews">
         <div class="container">
           <div class="reviews__wrapper">
-            <h2 class="caption">Отзывы</h2>
+            <h2 class="reviews__caption">Отзывы</h2>
             <button type="button" class="reviews__button-write">
               Написать
             </button>
@@ -189,6 +267,38 @@
               ></button>
             </div>
           </div>
+
+          <div class="reviews__wrapper-modile">
+            <h2 class="reviews__caption">Отзывы</h2>
+            <p class="reviews__text">
+              Я молодая мама, но всё равно фотографии не набирали и близко
+              такого количества лайков, как у популярных инстамамочек. В
+              отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои
+              фотографии сразу стали более стильными, а также набирают больше
+              лайков!
+            </p>
+            <div>
+              <span class="reviews__name">Анастасия Красильникова</span>
+            <span class="reviews__id">@misssssiskras</span>
+            </div>
+
+            <div class="reviews__button-inner">
+              <button
+                type="button"
+                class="reviews__button reviews__button-left"
+              ></button>
+              <button
+                type="button"
+                class="reviews__button reviews__button-right"
+              ></button>
+            </div>
+
+            <div class="reviews__button-write-inner">
+              <button type="button" class="reviews__button-write">
+                Написать
+              </button>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -196,10 +306,10 @@
         <div class="container">
           <div class="contacts__wrapper">
             <div class="contacts_description">
-              <h2 class="caption">Контакты</h2>
+              <h2 class="contacts_caption">Контакты</h2>
               <table class="contacts__table" border="1">
                 <tr class="contacts__table-inner">
-                  <td>e-mail:</td>
+                  <td class="contacts__info-email">e-mail:</td>
                   <td> <a
                     class="contacts__info-link"
                     href="mailto:info@mimimishkashop.ru"
@@ -214,10 +324,26 @@
                 </tr>
               </table>
 
-              <button class="contacts__button" type="button">
-                Напишите нам
-              </button>
+              <table class="contacts__table contacts__table-tablet" border= "1">
+                  <tr class="contacts__table-inner">
+                    <td class="contacts__info-email">e-mail:</td>
+                    <td><a
+                      class="contacts__info-link"
+                      href="mailto:info@mimimishkashop.ru"
+                      >info@mimimishkashop.ru</a</td>
+                    <td class="contacts__table-item">адрес:</td>
+                    <td class="contacts__table-item-adress"><address class="contacts__info-address">
+                      Санкт-Петербург ул.&nbsp;Большая&nbsp;Конюшенная д.&nbsp;19/8,&nbsp;офис&nbsp;101
+                    </address></td>
+                  </tr>
+              </table>
+
+             
             </div>
+
+            <button class="contacts__button" type="button">
+              Напишите нам
+            </button>
 
             <div class="contacts__map">
               <button class="contacts__map-button" type="button">

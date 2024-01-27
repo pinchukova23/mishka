@@ -3,8 +3,35 @@
   border-bottom: 1px solid $header-grey;
 }
 
+.header__wrapper {
+  position: relative;
+
+  @media (max-width: $max-mobile-width) {
+    height: 88px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+      content: "";
+    position: absolute;
+    background-image: url('/src/img/header_menu_mobile.svg');
+    top: 37px;
+    right: 0;
+    width: 20px;
+    height: 14px;
+    
+  }
+
+  &:hover::before {
+    opacity: 0.6;
+  }
+}
+}
+
 .header__logo {
   position: absolute;
+  z-index: 1;
   left: 0;
   right: 0;
   top: 7px;
@@ -12,10 +39,49 @@
   align-items: center;
     justify-content: center;
 
-}
+    @media (max-width:$max-tablet-width) {
+      position: absolute;
+      left: 0;
+      right: auto;
+      top: 12px;
+      display: flex;
+      align-items: center;
+        justify-content: center;
+    }
 
+    @media (max-width: $max-mobile-width) {
+      right: 0;
+      top: 0;
+  }
+
+}
+.header__img-logo {
+  @media (max-width:$max-tablet-width) {
+    display: none;
+  }
+}
 .header__img-logo:hover {
     opacity: 0.6;
+  }
+
+  .header__img-logo-tablet {
+    display: none;
+
+    @media (max-width:$max-tablet-width) {
+      display: inline;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      display: none;
+    }
+  }
+
+  .header__img-logo-mobile {
+    display: none;
+
+    @media (max-width: $max-mobile-width) {
+      display: inline;
+    }
   }
 
 .header__nav-text {
@@ -29,6 +95,15 @@
   @include list-style;
   display: grid;
   grid-template-columns: 185px 1fr 82px 261px;
+
+  @media (max-width:$max-tablet-width) {
+    grid-template-columns: 82px 261px;
+    justify-content: end;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    display: none;
+  }
 }
 
 .header__nav-link {
@@ -69,10 +144,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+
+    @media (max-width:$max-tablet-width) {
+
+      ::after {
+        content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 1px;
+      background-color: $header-grey;
+    }
+      }
   }
 
   &--order {
     padding-left: 35px;
+    
   }
 
   &--car {
@@ -96,11 +186,22 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+
   }
 
   &--car:hover {
     opacity: 0.6;
   }
+
+@media (max-width:$max-tablet-width) {
+  &--catalog {
+    display: none;
+  }
+
+  &--order {
+    display: none;
+  }
+}
 
 }
 
@@ -135,4 +236,6 @@
 
 
 }
+
+
 

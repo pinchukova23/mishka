@@ -3,27 +3,41 @@
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: $alabaster;
+  background-color: $alabaster;background-size: contain;
+
   padding-top: 19px;
 
   &::before {
     content: "";
     position: absolute;
     background-image: url('/src/img/zigzag_desktop.svg');
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
     z-index: 2;
     bottom: -1px;
     height: 34px;
     width: 100%;
     left: 0;
     right: 0;
+
+    @media (max-width: $max-mobile-width) {
+      position: inherit;
   }
+  }
+
+  @media (max-width: $max-mobile-width) {
+    background-position: center 69px;
+ }
 }
 .hero__list {
   @include list-style;
   display: grid;
   grid-template-columns: 174px 1fr 259px;
   margin-bottom: 114px;
+
+  @media (max-width: $max-mobile-width) {
+    display: none;
+}
 }
 
 .hero__item {
@@ -33,6 +47,12 @@
 
   &--end {
     justify-self: end;
+  }
+
+  @media (max-width:$max-tablet-width) {
+    &--order {
+      padding-left: 1px;
+    }
   }
 }
 
@@ -67,11 +87,39 @@
   font-size: 53px;
   margin-bottom: 355px;
   line-height: 57px;
+
+  @media (max-width:$max-tablet-width) {
+    font-size: 43px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+  display: none;
+  
+}
+}
+
+.hero__caption-mobile {
+  display: none;
+  @media (max-width: $max-mobile-width) {
+    display: block;
+    margin-top: 48px;
+    margin-bottom: 122px;
+    font-size: 26px;
+    font-weight: 700;
+line-height: 30px;
+
+}
 }
 
 .hero__catalog-list {
   @include list-style;
   display: flex;
+
+  @media (max-width: $max-mobile-width) {
+   flex-direction: column;
+   margin-left: calc(50% - 50vw);
+   margin-right: calc(50% - 50vw);
+}
 }
 
 .hero__catalog-item{
@@ -90,6 +138,14 @@
   padding-top: 25px;
   padding-bottom: 61px;
   padding-left: 37px;
+
+  @media (max-width: $max-mobile-width) {
+    padding-bottom: 22px;
+}
+
+  &:hover {
+    bottom: 5px;
+}
 }
 
 .hero__catalog-link--design {
@@ -103,6 +159,11 @@
     top: 33px;
     right: 33px;
     z-index: 0;
+
+    @media (max-width: $max-mobile-width) {
+      top: 23px;
+      right: 53px;
+  }
   }
 
 }
@@ -121,6 +182,11 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+
+    @media (max-width: $max-mobile-width) {
+      top: 23px;
+      right: 45px;
+  }
   }
 }
 

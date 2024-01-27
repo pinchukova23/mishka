@@ -12,6 +12,19 @@ body {
 .container {
   max-width: 1050px;
   margin: 0 auto;
+
+  @media (max-width:$max-tablet-width) {
+    max-width: none;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+@media (max-width: $max-mobile-width) {
+  padding-left: 30px;
+  padding-right: 30px;
+
+}
+
 }
 
 .visually-hidden {
